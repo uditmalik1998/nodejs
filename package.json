@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is the Backend Project for Learning",
+  "main": "index.js",
+  "author": "Udit Malik",
+  "license": "MIT",
+  "scripts":{
+    "swiggy":"nodemon packages/swiggy/index.js"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

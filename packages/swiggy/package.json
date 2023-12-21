@@ -1,0 +1,14 @@
+{
+  "name": "swiggy",
+  "version": "1.0.0",
+  "description": "Make Swiggy Api for pratice",
+  "main": "index.js",
+  "author": "Udit Malik",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^8.0.3"
+  }
+}
