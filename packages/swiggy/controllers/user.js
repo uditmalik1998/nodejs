@@ -8,6 +8,23 @@ const registerUser = async (req, res) => {
   res.status(200).json({ username: user.name, token: token });
 };
 
+const loginUser = async (req, res) => {
+  const { email = "", password = "" } = req.body;
+
+  const user = await UserSchema.findOne({ email });
+
+  const isAuth = await user.comparePassword(password);
+
+  if (!isAuth) {
+    res.status(404).end("Enter Valid Creditianals");
+  }
+
+  const token = user.createJWT();
+
+  res.status(200).json({ username: user.name, token: token });
+};
+
 module.exports = {
   registerUser,
+  loginUser,
 };
