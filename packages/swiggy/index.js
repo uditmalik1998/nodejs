@@ -6,6 +6,7 @@ const connectDB = require("./db/connect");
 
 const HomelayoutRouter = require("./routes/restaurant-layout");
 const BannerOfferRouter = require("./routes/offers-layout");
+const UserRouter = require("./routes/user");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use(express.json());
 // routes
 app.use("/api/v1/restaurant", HomelayoutRouter);
 app.use("/api/v1/offer", BannerOfferRouter);
+app.use("/api/v1/user",UserRouter);
 
 const start = async () => {
   try {
